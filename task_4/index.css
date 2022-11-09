@@ -1,0 +1,113 @@
+/* TODO БЭМ: поделить на отдельные файлы */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --darkGray: #333333;
+  --red: #eb1d36;
+  --beige: #f5eddc;
+  --pink: #fa9494;
+}
+
+body {
+  color: var(--darkGray);
+  font-family: "Open Sans", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
+
+h2,
+h3 {
+  color: var(--red);
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  align-items: center;
+  background-image: linear-gradient(to right, white 10%, var(--pink));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 center;
+  display: flex;
+  gap: 0 12px;
+  margin: 0.75em auto;
+  max-width: 1200px;
+}
+
+.header__title {
+  color: var(--red);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main__education > p {
+  line-height: 150%;
+  margin: 0.5rem 1rem;
+}
+
+.main__career > ul {
+  line-height: 150%;
+  list-style: none;
+  margin: 0.5rem 1rem;
+  padding: 0;
+}
+
+.main__photo {
+  width: 320px;
+  height: 427px;
+}
+
+.main__info {
+  max-width: 60%;
+}
+
+.development__title {
+  background-image: linear-gradient(
+    to right,
+    var(--pink),
+    white 35%,
+    white 65%,
+    var(--pink)
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 center;
+  text-align: center;
+}
+
+.development__projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+}
+
+.development__projects > li {
+  border: 1px solid var(--pink);
+  border-radius: 12px;
+  max-width: 32%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .main__info {
+    max-width: 100%;
+  }
+}
